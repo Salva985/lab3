@@ -1,0 +1,254 @@
+  * {
+    font-size: medium;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: sans-serif;
+    background: linear-gradient(155deg, #000000e6, #ff0000d4, #221b1b0d);
+  }
+  
+  header {
+    background-image: url("images/banner.png");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+  }
+  
+  header .logo {
+    position: relative;
+    top: 10px;
+    left: 20px;
+  }
+  
+  header .logo img {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    max-height: 250px;
+  }
+  
+  nav {
+    position: absolute;
+    top: 40px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: #e90303;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  nav a:active {
+    color: white;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 20px;
+  }
+
+
+  p {
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.6;
+    padding: 0 1rem;
+  }
+
+  .text-block {
+    max-width: 800px;
+    margin: 3rem auto; 
+    padding: 2rem;
+    text-align: center;
+    background-color: #abafaf;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #2f2f2f40;
+    color: #363535;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 20px;
+    padding: 2rem;
+    justify-items: center;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;      
+    object-fit: cover;   
+    border-radius: 6px;
+  }
+  
+  .card p {
+    padding: 1rem;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .agenda-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+  }
+  
+  article {
+    background-color: #f3f3f3;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  article:hover {
+    transform: translateY(-5px);
+  }
+  
+  article h2 {
+    margin-top: 0;
+    color: #e90303;
+  }
+
+ .form {
+    max-width: 500px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form input[type="text"],
+  .form input[type="email"],
+  .form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .form button {
+    background-color: #e90303;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form button:hover {
+    background-color: #c70202;
+  }
+  
+  .form label {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .artist-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+  }
+
+  .artist-card {
+    border: 2px solid #0a0a0a;
+    width: 280px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .artist-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .artist-card:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+  }
+
+  .artist-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 180px;
+    padding: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .artist-nav a {
+    color: #fff;
+    background-color: #e90303;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .artist-nav a:hover {
+    background-color: #c70202;
+  }
+
+
